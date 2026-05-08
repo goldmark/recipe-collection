@@ -13,6 +13,7 @@ REQUIRED_SECTIONS = [
     "## Ingredients",
     "## Instructions",
     "## Notes",
+    "## Variations",
 ]
 
 REQUIRED_METADATA = [
