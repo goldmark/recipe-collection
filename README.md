@@ -11,6 +11,7 @@ A demo project for exploring a modern developer workflow: Git, GitHub, Copilot, 
 
 | Recipe | Cuisine | Time | Difficulty |
 |---|---|---|---|
+| [Bread Pudding](./recipes/bread-pudding.md) | British | 60 min | Easy |
 | [Chicken Tikka Masala](./recipes/chicken-tikka-masala.md) | Indian | 45 min | Medium |
 | [Chocolate Chip Cookies](./recipes/chocolate-chip-cookies.md) | Dessert | 30 min | Easy |
 | [Pasta Carbonara](./recipes/pasta-carbonara.md) | Italian | 20 min | Easy |
