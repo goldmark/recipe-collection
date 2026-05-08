@@ -10,3 +10,6 @@ Thumbs.db
 # Drafts (in case you want to scribble locally without committing)
 drafts/
 *.draft.md
+
+# Claude Code local settings
+.claude/settings.local.json
