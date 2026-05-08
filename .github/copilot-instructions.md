@@ -1,6 +1,6 @@
 # Copilot Instructions
 
-This is a personal recipe collection. When suggesting content for files in this repo, follow these conventions.
+This is a demo recipe collection used to showcase developer workflows. When suggesting content for files in this repo, follow these conventions.
 
 ## Recipe file structure
 
@@ -36,7 +36,7 @@ All recipes in `recipes/` follow this exact structure:
 
 ## Style guidelines
 
-- **Ingredients:** use metric units (g, ml) by default. Include preparation in the ingredient line ("finely chopped", "minced"), not in the steps.
+- **Ingredients:** prefer metric units (g, ml), but common kitchen measures (tbsp, tsp, cups) are also acceptable where they fit the recipe style. Include preparation in the ingredient line ("finely chopped", "minced"), not in the steps.
 - **Instructions:** start each step with a verb. Keep them concise — one action per step. Don't re-state ingredient quantities in steps.
 - **Notes:** write in first person, casual tone. These are honest cooking notes, not marketing copy.
 - **Tone:** conversational, opinionated, no filler. Avoid phrases like "delicious", "perfect", "amazing".

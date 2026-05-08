@@ -11,10 +11,10 @@ A demo project for exploring a modern developer workflow: Git, GitHub, Copilot, 
 
 | Recipe | Cuisine | Time | Difficulty |
 |---|---|---|---|
-| [Pasta Carbonara](./recipes/pasta-carbonara.md) | Italian | 20 min | Easy |
 | [Chicken Tikka Masala](./recipes/chicken-tikka-masala.md) | Indian | 45 min | Medium |
 | [Chocolate Chip Cookies](./recipes/chocolate-chip-cookies.md) | Dessert | 30 min | Easy |
-| [Shakshuka](./recipes/shakshuka.md) | Middle Eastern | 25 min | Easy |
+| [Pasta Carbonara](./recipes/pasta-carbonara.md) | Italian | 20 min | Easy |
+| [Shakshuka](./recipes/shakshuka.md) | Middle Eastern | 30 min | Easy |
 
 ## Adding a new recipe
 

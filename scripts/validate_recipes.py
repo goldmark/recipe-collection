@@ -30,20 +30,36 @@ RECIPES_DIR = Path(__file__).parent.parent / "recipes"
 def validate_recipe(path: Path) -> list[str]:
     """Return a list of problems found in this recipe. Empty list = valid."""
     problems = []
-    content = path.read_text(encoding="utf-8")
+    try:
+        content = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeDecodeError) as error:
+        return [f"unable to read file: {error}"]
+
+    lines = content.splitlines()
+    parsed_lines = []
+    in_fence = False
+    for line in lines:
+        stripped = line.strip()
+        if stripped.startswith("```"):
+            in_fence = not in_fence
+            continue
+        if not in_fence:
+            parsed_lines.append(stripped)
 
     # Must start with a top-level heading
-    if not content.lstrip().startswith("# "):
+    first_content_line = next((line for line in parsed_lines if line), "")
+    if not first_content_line.startswith("# "):
         problems.append("missing top-level heading (# Recipe Name)")
 
     # Required metadata fields
     for field in REQUIRED_METADATA:
-        if field not in content:
+        if not any(line.startswith(field) for line in parsed_lines):
             problems.append(f"missing metadata field: {field}")
 
     # Required sections
+    headings = {line for line in parsed_lines if line.startswith("## ")}
     for section in REQUIRED_SECTIONS:
-        if section not in content:
+        if section not in headings:
             problems.append(f"missing section: {section}")
 
     return problems
