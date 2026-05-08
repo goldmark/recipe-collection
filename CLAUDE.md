@@ -10,6 +10,7 @@ This is a demo project used to showcase developer workflows (Git, GitHub, Markdo
 
 - `recipes/` — Individual recipe files (one per dish)
 - `templates/recipe-template.md` — Canonical template; all new recipes must follow this structure
+- `scripts/validate_recipes.py` — Validation script; checks all recipes for required metadata and sections
 - `README.md` — Main index; contains a table listing all recipes — update it when adding or removing a recipe
 - `.github/PULL_REQUEST_TEMPLATE.md` — Checklist for recipe PRs
 
@@ -35,3 +36,9 @@ Recipes follow a fixed front-matter block then standard sections:
 ## Workflow
 
 New recipes are added via feature branch + PR. The PR template at `.github/PULL_REQUEST_TEMPLATE.md` has the checklist to follow. README.md recipe table must be kept in sync with the `recipes/` directory.
+
+GitHub Actions runs `scripts/validate_recipes.py` automatically on push and PR. Run it locally to catch issues before committing:
+
+```bash
+python scripts/validate_recipes.py
+```

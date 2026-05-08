@@ -56,3 +56,9 @@ All recipes in `recipes/` follow this exact structure:
 
 - Add new recipes to the table in alphabetical order.
 - Match the existing column format: name (linked), cuisine, time, difficulty.
+
+## Validation
+
+- All recipes are validated automatically by GitHub Actions on push and PR.
+- The script checks for required metadata fields and sections.
+- Run locally before committing: `python scripts/validate_recipes.py`
